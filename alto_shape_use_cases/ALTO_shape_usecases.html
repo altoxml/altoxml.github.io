@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" type="text/css" href="css/altoxml_usecases.css" />
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js?ver=4.0"></script>
+        <script>
+
+	function toc() {
+		var ToC =
+  		"<nav role='navigation' class='table-of-contents'>" +
+    		"<h2>Table of contents</h2>";
+		var newLine, el, title1, title, link;
+	
+		$("toc :header").each(function(){
+	  	el = $(this);
+  		title = el.text();
+    	title = title.replace(/</g, '&lt;');
+  		link = "#" + el.attr("id");
+
+		tagname = el.prop("tagName");
+		indent = "";
+		
+		if (tagname == "H3") {
+			classname = "toc_l_two";
+		} else if (tagname == "H4") {
+			classname = "toc_l_three";
+		} else {
+			classname = "toc";
+		}
+
+  		newLine =
+    		"<p class=\"" + classname + "\">" + 
+      		"<a href='" + link + "'>" +
+        		title +
+      		"</a>" +
+    		"</p>";
+
+	  	ToC += newLine;
+		
+		});
+		
+		ToC += "</nav>";
+		$(".toc").prepend(ToC);
+}
+</script>
+
+    </head>
+
+    <body onload="toc()">
+        <h1>ALTO shape use cases</h1>
+        <p>Version 19-11-2014</p>
+        <p>ALTO Board</p>
+        <div class="copyright_notice">
+            <p>Copyright © 2014 ALTO Board. All rights reserved.</p>
+						<p>...</p>
+            <p>The ALTO Board</p>
+        </div>
+        
+        <toc class="toc"/>
+        <h2 id="intrduction">Introduction</h2>
+        <p>The ALTO version 3.1 introduces makes it possible to use the shapes other than the standard rectangle for the elements String, TextLine, PageSpaceType and all block types.</p>
+            
+        <h3>Use Cases</h3>
+        
+        <h4 id="text_tags_2">Layout that can be described with polygons</h4>
+        <!-- -->
+        <div class="example">
+            <div class="usecase_title">Dropped caps</div>
+            <div class="example_part">
+                <div class="example_left">
+                    <div class="usecase_code">
+                        <pre><code>
+...
+&lt;TextBlock ID="TextBlock4" HEIGHT="198" WIDTH="785" 
+    HPOS="318" VPOS="1456" >
+	&lt;TextLine ID="TextLine8">
+  &lt;Shape>
+  	&lt;Polygon POINTS="325 1456 1023 1456 1023 1504 
+  	419 1504 419 1552 325 1552"/>
+  &lt;/Shape>
+  &lt;String ID="String33" CONTENT="EEn" WC="0.82" CC="050">
+	  &lt;shape>&lt;Polygon POINTS="325 1456 419 1456 
+	  419 1552 325 1552"/>&lt;/shape>
+  &lt;/String>
+  &lt;SP ID="SP26" WIDTH="28" HPOS="472" VPOS="1456"/>
+  &lt;String ID="String34" CONTENT="F~iJJcher" 
+  HEIGHT="43" WIDTH="152"   HPOS="500" VPOS="1457" 
+  WC="0.82" CC="860001000"/>
+  &lt;SP ID="SP27" WIDTH="13" HPOS="652" VPOS="1457"/>
+ ...
+</code></pre>
+                    </div>
+                </div>
+                <div class="example_right">
+                    <div class="usecase_image">
+                        <img class="example_image" src="images/polygons-example1.png" alt="" /></div>
+                </div>
+            </div>
+            <div class="usecase_remarks">Source: http://resolver.kb.nl/resolve?urn=dpo:1837:mpeg21:0006</div>
+        </div>
+        
+<!-- -->
+       <div class="example">
+            <div class="usecase_title">Headline on more than one row</div>
+            <div class="example_part">
+                <div class="example_left">
+                    <div class="usecase_code">
+                        <pre><code>
+</code></pre>
+                    </div>
+                </div>
+                <div class="example_right">
+                    <div class="usecase_image">
+                        <img class="example_image" src="images/polygons-example3.png" alt="" /></div>
+                </div>
+            </div>
+            <div class="usecase_remarks">Source: http://resolver.kb.nl/resolve?urn=ddd:010646453:mpeg21:p005</div>
+        </div>
+
+<!-- -->
+       <div class="example">
+            <div class="usecase_title">Skewed text</div>
+            <div class="example_part">
+                <div class="example_left">
+                    <div class="usecase_code">
+                        <pre><code>
+</code></pre>
+                    </div>
+                </div>
+                <div class="example_right">
+                    <div class="usecase_image">
+                        <img class="example_image" src="images/polygons-example4.png" alt="" /></div>
+                </div>
+            </div>
+            <div class="usecase_remarks">Source: http://resolver.kb.nl/resolve?urn=ddd:010417484:mpeg21:p006</div>
+        </div>
+        
+        
+<!-- -->
+       <div class="example">
+            <div class="usecase_title">Wrapped text</div>
+            <div class="example_part">
+                <div class="example_left">
+                    <div class="usecase_code">
+                        <pre><code>
+</code></pre>
+                    </div>
+                </div>
+                <div class="example_right">
+                    <div class="usecase_image">
+                        <img class="example_image" src="images/polygons-example2.png" alt="" /></div>
+                </div>
+            </div>
+            <div class="usecase_remarks">Source: http://resolver.kb.nl/resolve?urn=dts:2958045:mpeg21:0001
+            	http://resolver.kb.nl/resolve?urn=dts:2561033:mpeg21:0012</div>
+        </div>
+
+            
+    </body>
+</html>
