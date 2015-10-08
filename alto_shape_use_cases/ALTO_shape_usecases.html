@@ -82,7 +82,7 @@
   	419 1504 419 1552 325 1552"/>
   &lt;/Shape>
   &lt;String ID="String33" CONTENT="EEn" WC="0.82" CC="050">
-	  &lt;shape>&lt;Polygon POINTS="325 1456 419 1456 
+	  &lt;Shape>&lt;Polygon POINTS="325 1456 419 1456 
 	  419 1552 325 1552"/>&lt;/shape>
   &lt;/String>
   &lt;SP ID="SP26" WIDTH="28" HPOS="472" VPOS="1456"/>
@@ -127,19 +127,18 @@
                 <div class="example_left">
                     <div class="usecase_code">
                         <pre><code>
-&lt;TextBlock ID="P6_TB00004" ROTATION="15">
+&lt;TextBlock ID="P6_TB10004" ROTATION="315">
+  &lt;Shape>&lt;Polygon POINTS="1 2 3 4 5 6 7 8"/>&lt;/Shape>
+  &lt;TextLine ID="P6_TL10022">
     &lt;Shape>&lt;Polygon POINTS="1 2 3 4 5 6 7 8"/>&lt;/Shape>
-&lt;TextLine ID="P6_TL00022">
-    &lt;Shape>&lt;Polygon POINTS="1 2 3 4 5 6 7 8"/>&lt;/Shape>
-&lt;String ID="P6_ST00188" HPOS="229" VPOS="209" WIDTH="352" HEIGHT="172" CONTENT="LODEN" WC="0.98" CC="00804">
-    &lt;Shape>&lt;Polygon POINTS="1 2 3 4 5 6 7 8"/>&lt;/Shape>
-&lt;/String>
-&lt;SP ID="P6_SP00167" HPOS="581" VPOS="381" WIDTH="60">
-&lt;/SP>
-&lt;String ID="P6_ST00189" HPOS="641" VPOS="209" WIDTH="416" HEIGHT="181" CONTENT="JASSEN" WC="0.99" CC="040000">
-    
-&lt;/String>
-                     	
+    &lt;String ID="P6_ST10188" CONTENT="LODEN" WC="0.98" CC="00804">
+      &lt;Shape>&lt;Polygon POINTS="1 2 3 4 5 6 7 8"/>&lt;/Shape>
+    &lt;/String>
+    &lt;SP ID="P6_SP10167" HPOS="581" VPOS="381" WIDTH="60"/>
+    &lt;String ID="P6_ST10189" CONTENT="JASSEN" WC="0.99" CC="040000">
+      &lt;Shape>&lt;Polygon POINTS="1 2 3 4 5 6 7 8" />&lt;/Shape>
+    &lt;/String>
+...                    	
                         
 </code></pre>
                     </div>
@@ -149,6 +148,8 @@
                         <img class="example_image" src="images/polygons-example4.png" alt="" /></div>
                 </div>
             </div>
+            <div class="usecase_remarks">Note that the TextLine and String element inherit the Rotation characteristics from the TextBlock element.</div>
+            <div class="usecase_remarks"/>
             <div class="usecase_remarks">Source: http://resolver.kb.nl/resolve?urn=ddd:010417484:mpeg21:p006</div>
         </div>
 
@@ -160,15 +161,33 @@
                 <div class="example_left">
                     <div class="usecase_code">
                         <pre><code>
+&lt;ComposedBlock ID="ComposedBlock2" HEIGHT="842" WIDTH="746" 
+                  HPOS="167" VPOS="253" ROTATION="270">
+  &lt;TextBlock ID="TextBlock2" HEIGHT="842" WIDTH="746" 
+                HPOS="167" VPOS="253">
+    &lt;TextLine ID="TextLine10" HEIGHT="842" WIDTH="746" 
+                 HPOS="167" VPOS="253">
+      &lt;String ID="String155" HEIGHT="842" WIDTH="746" 
+                 HPOS="167" VPOS="253" CONTENT="Amsterdam">&lt;/String>
+      ...
+    &lt;/TextLine>
+  &lt;/TextBlock>
+  &lt;TextBlock ID="TextBlock3" HEIGHT="842" WIDTH="746" 
+                HPOS="167" VPOS="253">
+    &lt;TextLine ID="TextLine18">
+    ...
+
 </code></pre>
                     </div>
                 </div>
                 <div class="example_right">
                     <div class="usecase_image">
-                        <img class="example_image" src="images/polygon-example5.png" alt="" /></div>
+                        <img class="example_image" src="images/polygon-example5a.png" alt="" /></div>
                 </div>
             </div>
-            <div class="usecase_remarks">Source: </div>
+            <div class="usecase_remarks">In this example the direction of the text is recorded in the rotation attribute in the ComposedBlock element and is inherited by the individual TextBlocks. It could also be recorded in each individual TextBlocks.</div>
+            <div class="usecase_remarks">&nbsp;</div>
+            <div class="usecase_remarks">Source: </div>                       
         </div>
         
         
