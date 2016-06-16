@@ -1,51 +1,230 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Welcome to the ALTO Editorial Board Github Webpages</h1>
+<style type=text/css>
+    .toggle-box {
+        display: none;
+    }
+    .toggle-box + label {
+        cursor: pointer;
+        display: block;
+        font-weight: bold;
+        line-height: 21px;
+        margin-bottom: 5px;
+        font: bold 12pt/20px "Courier New", Courier, mono;
+        color: #1882BD;
+    }
+    .toggle-box + label + div {
+        display: none;
+        margin-bottom: 10px;
+    }
+    .toggle-box:checked + label + div {
+        display: block;
+    }
+    .toggle-box + label:before {
+        background-color: #BD710F;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        color: #FFFFFF;
+        content: "+";
+        display: block;
+        float: left;
+        font-weight: bold;
+        height: 20px;
+        line-height: 20px;
+        margin-right: 5px;
+        text-align: center;
+        width: 20px;
+    }
+    .toggle-box:checked + label:before {
+        content: "\2212";
+    }
+    a {
+        color: #3e7896;
+        text-decoration: underline;
+    }
+    a:link {
+        color: #3e7896;
+        text-decoration: underline;
+    }
+    a:visited {
+        color: #3e7896;
+        text-decoration: underline;
+    }
+    a:hover {
+        color: #3e7896;
+        text-decoration: underline;
+        background: #d0e6f5;
+    }
+    ul {
+        list-style-image: url("http://www.loc.gov/standards/alto/images/arrow-bullet.gif");
+    }
+    body {
+        font: 9pt verdana, helvetica, sans-serif;
+    }
+    #border {
+        text-align: left;
+        width: 700px;
+        border: 1px solid #999;
+        margin: 0 auto;
+    }
+    #frame {
+        text-align: left;
+        width: 680px;
+        margin: 0 auto;
+    }
+    div.blue {
+        background: #1882BD;
+        height: 5px;
+        width: 100%;
+        line-height: 1px;
+        font-size: 1px;
+        /*these two lines override a default in IE*/
+    }
+</style>
 
-<ul>
-<li><a href="./2016-06-16 ALTO Board Meeting Agenda.html">2016-06-16 ALTO Board Meeting Agenda</a></li>
-<li><a href="./2016-05-18 ALTO Board Meeting Minutes.html">2016-05-18 ALTO Board Meeting Minutes</a></li>
-<li><a href="./2016-05-18 ALTO Board Meeting Agenda.html">2016-05-18 ALTO Board Meeting Agenda</a></li>
-<li><a href="./2016-04-2x ALTO Board Meeting Agenda.html">2016-04-2x ALTO Board Meeting Agenda</a></li>
-<li><a href="./2016-03-23 ALTO Board Meeting Minutes.html">2016-03-23 ALTO Board Meeting Minutes</a></li>
-<li><a href="./2016-03-23 ALTO Board Meeting Agenda.html">2016-03-23 ALTO Board Meeting Agenda</a></li>
-<li><a href="./2016-02-24 ALTO Board Meeting Minutes.html">2016-02-24 ALTO Board Meeting Minutes</a></li>
-<li><a href="./2016-02-24 ALTO Board Meeting Agenda.html">2016-02-24 ALTO Board Meeting Agenda</a></li>
-<li><a href="./2016-01-27 ALTO Board Meeting Minutes.html">2016-01-27 ALTO Board Meeting Minutes</a></li>
-<li><a href="./2016-01-27 ALTO Board Meeting Agenda.html">2016-01-27 ALTO Board Meeting Agenda</a></li>
-<li><a href="./2015-12-02 ALTO Board Meeting Minutes.html">2015-12-02 ALTO Board Meeting Minutes</a></li>
-<li><a href="./2015-12-02 ALTO Board Meeting Agenda.html">2015-12-02 ALTO Board Meeting Agenda</a></li>
-<li><a href="./2015-11-06 ALTO Board Meeting Minutes.html">2015-11-06 ALTO Board Meeting Minutes</a></li>
-<li><a href="./2015-11-06 ALTO Board Meeting Agenda.html">2015-11-06 ALTO Board Meeting Agenda</a></li>
-<li><a href="./2015-10-14 ALTO Board Meeting Minutes.html">2015-10-14 ALTO Board Meeting Minutes</a></li>
-<li><a href="./2015-10-14 ALTO Board Meeting Agenda.html">2015-10-14 ALTO Board Meeting Agenda</a></li>
-<li><a href="./2015-09-14 ALTO Board Meeting Minutes.html">2015-09-14 ALTO Board Meeting Minutes</a></li>
-<li><a href="./2015-09-14 ALTO Board Meeting Agenda.html">2015-09-14 ALTO Board Meeting Agenda</a></li>
-<li><a href="./2015-06-24 ALTO Board Meeting Minutes.html">2015-06-24 ALTO Board Meeting Minutes</a></li>
-<li><a href="./2015-06-24 ALTO Board Meeting Agenda.html">2015-06-24 ALTO Board Meeting Agenda</a></li>
-<li><a href="./2015-06-03 ALTO Board Meeting Minutes.html">2015-06-03 ALTO Board Meeting Minutes</a></li>
-<li><a href="./2015-06-03 ALTO Board Meeting Agenda.html">2015-06-03 ALTO Board Meeting Agenda</a></li>
-<li><a href="./2015-05-06 ALTO Board Meeting Minutes.html">2015-05-06 ALTO Board Meeting Minutes</a></li>
-<li><a href="./2015-05-06 ALTO Board Meeting Agenda.html">2015-05-06 ALTO Board Meeting Agenda</a></li>
-<li><a href="./2015-04-08 ALTO Board Meeting Minutes.html">2015-04-08 ALTO Board Meeting Minutes</a></li>
-<li><a href="./2015-04-08 ALTO Board Meeting Agenda.html">2015-04-08 ALTO Board Meeting Agenda</a></li>
-<li><a href="./2015-03-05 ALTO Board Meeting Minutes.html">2015-03-05 ALTO Board Meeting Minutes</a></li>
-<li><a href="./2015-03-05 ALTO Board Meeting Agenda.html">2015-03-05 ALTO Board Meeting Agenda</a></li>
-<li><a href="./2015-02-05 ALTO Board Meeting Minutes.html">2015-02-05 ALTO Board Meeting Minutes</a></li>
-<li><a href="./2015-02-05 ALTO Board Meeting Agenda.html">2015-02-05 ALTO Board Meeting Agenda</a></li>
-<li><a href="./2014-12-11 ALTO Board Meeting Minutes.html">2014-12-11 ALTO Board Meeting Minutes</a></li>
-<li><a href="./2014-12-11 ALTO Board Meeting Agenda.html">2014-12-11 ALTO Board Meeting Agenda</a></li>
-<li><a href="./2014-09-25 ALTO Board Meeting Minutes.html">2014-09-25 ALTO Board Meeting Minutes</a></li>
-<li><a href="./2014-09-25 ALTO Board Meeting Agenda.html">2014-09-25 ALTO Board Meeting Agenda</a></li>
-<li><a href="./2014-08-07 ALTO Board Meeting Minutes.html">2014-08-07 ALTO Board Meeting Minutes</a></li>
-<li><a href="./2014-08-07 ALTO Board Meeting Agenda.html">2014-08-07 ALTO Board Meeting Agenda</a></li>
-<li><a href="./2014-07-03 ALTO Board Meeting Minutes.html">2014-07-03 ALTO Board Meeting Minutes</a></li>
-<li><a href="./2014-07-03 ALTO Board Meeting Agenda.html">2014-07-03 ALTO Board Meeting Agenda</a></li>
-<li><a href="./2014-06-05 ALTO Board Meeting Minutes.html">2014-06-05 ALTO Board Meeting Minutes</a></li> 
-<li><a href="./2014-06-05 ALTO Board Meeting Agenda.html">2014-06-05 ALTO Board Meeting Agenda</a></li>
-<li><a href="./2014-04-24 ALTO Board Meeting Minutes.html">2014-04-24 ALTO Board Meeting Minutes</a></li> 
-</ul>
+<html>
+
+<body>
+
+    <div id="border">
+        <a href="http://www.loc.gov/standards/alto/"><img style="vertical-align:middle" src="http://www.loc.gov/standards/alto/images/alto-header.jpg">
+        </a>
+        <br>
+        <div id="frame">
+            <p>Welcome to the <a href="https://github.com/altoxml">ALTO XML GitHub</a> web pages!</p>
+            <p>ALTO (<strong>A</strong>nalyzed <strong>L</strong>ayout and <strong>T</strong>ext <strong>O</strong>bject) is a XML Schema that details technical metadata for describing the layout and content of physical text resources, such as pages of a book or a newspaper. It most commonly serves as an extension schema used within the <a href="http://www.loc.gov/standards/mets/">Metadata Encoding and Transmission Schema (METS)</a> administrative metadata section. However, ALTO instances can also exist as a standalone document used independently of METS.
+            </p>
+            <p>The official page of the ALTO standard is <a href="http://loc.gov/standards/alto"><strong>http://loc.gov/standards/alto</strong></a>. There you will find
+                <ul>
+                    <li>all the <a href="http://www.loc.gov/standards/alto/">officially released versions</a>
+                        <li>information about the <a href="http://www.loc.gov/standards/alto/">community and the editorial board</a>
+                            <li>a list of <a href="http://www.loc.gov/standards/alto/community/implementers.php">implementers</a>
+                </ul>
+            </p>
+
+            <p>"ALTO XML GitHub" (<a href="https://github.com/altoxml">https://github.com/altoxml</a>) is used as the environment for maintenance and development of the standard. On this location you will find
+            </p>
+
+            <input class="toggle-box" id="header1" type="checkbox" checked>
+            <label for="header1">ALTO Resources</label>
+            <div>
+                <ul>
+                    <li><a href="https://github.com/altoxml/schema/issues">Issues</a> that are under discussion
+                    </li>
+                    <li><a href="https://github.com/altoxml/documentation/wiki">Documentation</a>
+                    </li>
+                    <li><a href="https://github.com/altoxml/documentation/wiki/Software">Software</a> for creating, presenting and editing ALTO files
+                    </li>
+                    <li>ALTO Board <a href="http://altoxml.github.io/board/ALTO Board Membership Criteria.html">Membership Criteria</a>
+                    </li>
+                </ul>
+            </div>
+
+            <br>
+
+            <input class="toggle-box" id="header2" type="checkbox" checked>
+            <label for="header2">ALTO Use cases and Examples</label>
+            <div>
+                <ul>
+                    <li><a href="http://altoxml.github.io/documentation/use-cases/shape/ALTO_shape_usecases.html">Use case: Shape</a>
+                    </li>
+                    <li><a href="http://altoxml.github.io/documentation/use-cases/tags/ALTO_tags_usecases.html">Use case: Tags</a>
+                    </li>
+                    <li><a href="https://github.com/altoxml/documentation/tree/master/use-cases/alto-dialect">ALTO dialect @ BnF</a>
+                    </li>
+                </ul>
+            </div>
+
+            <br>
+
+            <input class="toggle-box" id="header3" type="checkbox" checked>
+            <label for="header3">ALTO Links</label>
+            <div>
+                <ul>
+                    <li><a href="http://www.loc.gov/standards/alto/">ALTO @ Library of Congress</a>
+                    </li>
+                    <li><a href="https://github.com/altoxml">ALTO @ GitHub</a>
+                    </li>
+                    <li><a href="https://en.wikipedia.org/wiki/ALTO_%28XML%29">ALTO @ Wikipedia</a>
+                    </li>
+                    <li><a href="https://abbyy.technology/en:features:ocr:alto">ALTO @ ABBYY</a>
+                    </li>
+                </ul>
+            </div>
+
+            <br>
+
+            <input class="toggle-box" id="header4" type="checkbox">
+            <label for="header4">ALTO Board Meeting Agenda and Minutes</label>
+            <div>
+                <ul>
+                    <li><a href="http://altoxml.github.io/board/agenda/2015-12-02 ALTO Board Meeting Agenda.html">2015-12-02 ALTO Board Meeting Agenda<a>
+            </li>
+            <li><a href="http://altoxml.github.io/board/minutes/2015-11-06 ALTO Board Meeting Minutes.html">2015-11-06 ALTO Board Meeting Minutes</a>
+                    </li>
+                    <li><a href="http://altoxml.github.io/board/agenda/2015-11-06 ALTO Board Meeting Agenda.html">2015-11-06 ALTO Board Meeting Agenda</a>
+                    </li>
+                    <li><a href="http://altoxml.github.io/board/minutes/2015-10-14 ALTO Board Meeting Minutes.html">2015-10-14 ALTO Board Meeting Minutes</a>
+                    </li>
+                    <li><a href="http://altoxml.github.io/board/agenda/2015-10-14 ALTO Board Meeting Agenda.html">2015-10-14 ALTO Board Meeting Agenda</a>
+                    </li>
+                    <li><a href="http://altoxml.github.io/board/minutes/2015-09-14 ALTO Board Meeting Minutes.html">2015-09-14 ALTO Board Meeting Minutes</a>
+                    </li>
+                    <li><a href="http://altoxml.github.io/board/agenda/2015-09-14 ALTO Board Meeting Agenda.html">2015-09-14 ALTO Board Meeting Agenda</a>
+                    </li>
+                    <li><a href="http://altoxml.github.io/board/minutes/2015-06-24 ALTO Board Meeting Minutes.html">2015-06-24 ALTO Board Meeting Minutes</a>
+                    </li>
+                    <li><a href="http://altoxml.github.io/board/agenda/2015-06-24 ALTO Board Meeting Agenda.html">2015-06-24 ALTO Board Meeting Agenda</a>
+                    </li>
+                    <li><a href="http://altoxml.github.io/board/minutes/2015-06-03 ALTO Board Meeting Minutes.html">2015-06-03 ALTO Board Meeting Minutes</a>
+                    </li>
+                    <li><a href="http://altoxml.github.io/board/agenda/2015-06-03 ALTO Board Meeting Agenda.html">2015-06-03 ALTO Board Meeting Agenda</a>
+                    </li>
+                    <li><a href="http://altoxml.github.io/board/minutes/2015-05-06 ALTO Board Meeting Minutes.html">2015-05-06 ALTO Board Meeting Minutes</a>
+                    </li>
+                    <li><a href="http://altoxml.github.io/board/agenda/2015-05-06 ALTO Board Meeting Agenda.html">2015-05-06 ALTO Board Meeting Agenda</a>
+                    </li>
+                    <li><a href="http://altoxml.github.io/board/minutes/2015-04-08 ALTO Board Meeting Minutes.html">2015-04-08 ALTO Board Meeting Minutes</a>
+                    </li>
+                    <li><a href="http://altoxml.github.io/board/agenda/2015-04-08 ALTO Board Meeting Agenda.html">2015-04-08 ALTO Board Meeting Agenda</a>
+                    </li>
+                    <li><a href="http://altoxml.github.io/board/minutes/2015-03-05 ALTO Board Meeting Minutes.html">2015-03-05 ALTO Board Meeting Minutes</a>
+                    </li>
+                    <li><a href="http://altoxml.github.io/board/agenda/2015-03-05 ALTO Board Meeting Agenda.html">2015-03-05 ALTO Board Meeting Agenda</a>
+                    </li>
+                    <li><a href="http://altoxml.github.io/board/minutes/2015-02-05 ALTO Board Meeting Minutes.html">2015-02-05 ALTO Board Meeting Minutes</a>
+                    </li>
+                    <li><a href="http://altoxml.github.io/board/agenda/2015-02-05 ALTO Board Meeting Agenda.html">2015-02-05 ALTO Board Meeting Agenda</a>
+                    </li>
+                    <li><a href="http://altoxml.github.io/board/minutes/2014-12-11 ALTO Board Meeting Minutes.html">2014-12-11 ALTO Board Meeting Minutes</a>
+                    </li>
+                    <li><a href="http://altoxml.github.io/board/agenda/2014-12-11 ALTO Board Meeting Agenda.html">2014-12-11 ALTO Board Meeting Agenda</a>
+                    </li>
+                    <li><a href="http://altoxml.github.io/board/minutes/2014-09-25 ALTO Board Meeting Minutes.html">2014-09-25 ALTO Board Meeting Minutes</a>
+                    </li>
+                    <li><a href="http://altoxml.github.io/board/agenda/2014-09-25 ALTO Board Meeting Agenda.html">2014-09-25 ALTO Board Meeting Agenda</a>
+                    </li>
+                    <li><a href="http://altoxml.github.io/board/minutes/2014-08-07 ALTO Board Meeting Minutes.html">2014-08-07 ALTO Board Meeting Minutes</a>
+                    </li>
+                    <li><a href="http://altoxml.github.io/board/agenda/2014-08-07 ALTO Board Meeting Agenda.html">2014-08-07 ALTO Board Meeting Agenda</a>
+                    </li>
+                    <li><a href="http://altoxml.github.io/board/minutes/2014-07-03 ALTO Board Meeting Minutes.html">2014-07-03 ALTO Board Meeting Minutes</a>
+                    </li>
+                    <li><a href="http://altoxml.github.io/board/agenda/2014-07-03 ALTO Board Meeting Agenda.html">2014-07-03 ALTO Board Meeting Agenda</a>
+                    </li>
+                    <li><a href="http://altoxml.github.io/board/minutes/2014-06-05 ALTO Board Meeting Minutes.html">2014-06-05 ALTO Board Meeting Minutes</a>
+                    </li>
+                    <li><a href="http://altoxml.github.io/board/agenda/2014-06-05 ALTO Board Meeting Agenda.html">2014-06-05 ALTO Board Meeting Agenda</a>
+                    </li>
+                    <li><a href="http://altoxml.github.io/board/minutes/2014-04-24 ALTO Board Meeting Minutes.html">2014-04-24 ALTO Board Meeting Minutes</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <br>
+        <div class="blue"></div>
+    </div>
 
 </body>
+
 </html>
